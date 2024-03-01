@@ -33,7 +33,11 @@ public class TestGoRest {
                 .then()
                 .statusCode(200)
                 .body("data", notNullValue())
-                .body("data", not(empty()));
+                .body("data", not(empty()))
+                .time(lessThan(2000L));
+
+
+
 
     }
 }
