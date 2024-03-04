@@ -131,7 +131,7 @@ public class TestGoRest {
 
         String newClient = "{\n" +
                 "    \"name\": \"Novo Teste\",\n" +
-                "    \"email\": \"la159la@gmail.com\",\n" +
+                "    \"email\": \"la1591223la@gmail.com\",\n" +
                 "    \"gender\": \"male\",\n" +
                 "    \"status\": \"active\"\n" +
                 "}";
@@ -151,7 +151,7 @@ public class TestGoRest {
                 .delete(BASE_URL + USER_RESOURCE + "/" + userId)
                 .then()
                 .statusCode(200)
-                //.body("code", equalTo(204))
+                .body("code", equalTo(204))
                 .log().all();
     }
 }
