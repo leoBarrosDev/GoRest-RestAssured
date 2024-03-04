@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestGoRest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-04T16:58:56" hostname="CTNDELL6JZM0D3" time="4.942">
+<testsuite name="TestGoRest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-04T19:08:14" hostname="CTNDELL6JZM0D3" time="5.553">
   <properties/>
-  <testcase name="Deve cadastrar um usuÃ¡rio na base de dados" classname="TestGoRest" time="4.942"/>
+  <testcase name="Deve excluir um usuÃ¡rio na base de dados baseado no id passado como parÃ¢metro" classname="TestGoRest" time="5.553"/>
   <system-out><![CDATA[HTTP/1.1 200 OK
-Date: Mon, 04 Mar 2024 16:59:01 GMT
+Date: Mon, 04 Mar 2024 19:08:20 GMT
 Content-Type: application/json; charset=utf-8
-Transfer-Encoding: chunked
+Content-Length: 36
 Connection: keep-alive
 Cache-Control: max-age=0, private, must-revalidate
-etag: W/"5ebfcfb0adf28ff1c93bbe64345ec79f"
-location: https://gorest.co.in/public-api/users/6759270
+etag: W/"9132bec7c413b5b015be1efe1c6efe72"
 referrer-policy: strict-origin-when-cross-origin
 vary: Origin
 x-content-type-options: nosniff
@@ -19,27 +18,20 @@ x-permitted-cross-domain-policies: none
 x-ratelimit-limit: 90
 x-ratelimit-remaining: 89
 x-ratelimit-reset: 1
-x-request-id: 31bba7b0-c027-43da-9b6b-8869a6f9fc76
-x-runtime: 0.097497
+x-request-id: e9ec38d3-c755-4873-b786-2f1dec8b44f0
+x-runtime: 0.077787
 x-xss-protection: 0
 CF-Cache-Status: DYNAMIC
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KtTlSgYuLnFZzpIHL%2FRbUGAFU3jvMig1r1RvreuBB4Zawfij6jElCPmxYD3cME7WnZbCA4IFpnVeBzdxJeNZx1tkKlqTjJaHlY4eYsZoU7lzbYZMoL1RxpVBRjhEhNo%3D"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=OFmdAPJr56yc%2Fj4%2BQDIi1JYAPumVAUzi9N%2B9HinjrwckZU9RI7Wbw6jMHQELKISIu%2BqOdMOQrMhxazXS4QwkAFetOhLzD2Q2QklRwAfrhNLebfKjf7j2JX6RF0Ti%2Fe4%3D"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 85f36a0f5f8f6dbf-MIA
-Content-Encoding: gzip
+CF-RAY: 85f427817c4d7486-MIA
 alt-svc: h3=":443"; ma=86400
 
 {
-    "code": 201,
+    "code": 204,
     "meta": null,
-    "data": {
-        "id": 6759270,
-        "name": "Agora Vai Barros",
-        "email": "simbora@gmail.com",
-        "gender": "male",
-        "status": "active"
-    }
+    "data": null
 }
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
