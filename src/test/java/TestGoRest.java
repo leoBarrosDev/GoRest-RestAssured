@@ -50,32 +50,29 @@ public class TestGoRest {
         RestAssured.config = RestAssuredConfig.config().sslConfig(
                 new SSLConfig().relaxedHTTPSValidation()
         );
-        String newClient = " \"name\": \"Viola Huels\",\n" +
-                "        \"email\": \"Augustine_Zieme@yahoo.com\",\n" +
-                "        \"gender\": \"female\",\n" +
-                "        \"status\": \"active\"";
-
-        String response = "{\n" +
-                "    \"code\": 201,\n" +
-                "    \"meta\": null,\n" +
-                "    \"data\": {\n" +
-                "        \"id\": 6754563,\n" +
-                "        \"name\": \"Viola Huels\",\n" +
-                "        \"email\": \"Augustine_Zieme@yahoo.com\",\n" +
-                "        \"gender\": \"female\",\n" +
-                "        \"status\": \"active\"\n" +
-                "    }\n" +
+        String newClient = "{\n" +
+                "    \"name\": \"Agora Vai Barros\",\n" +
+                "    \"email\": \"simbora@gmail.com\",\n" +
+                "    \"gender\": \"male\",\n" +
+                "    \"status\": \"active\"\n" +
                 "}";
+
         given()
-                .contentType(ContentType.JSON)
-                //.header("Content-Type", "application/json")
-                .header("Authorization", "Bearer" + token)
+                .header("Authorization", "Bearer " + token)
                 .body(newClient)
+                .contentType(ContentType.JSON)
                 .when()
                 .post(BASE_URL + USER_RESOURCE)
                 .then()
-                //.statusCode(200)
-                .assertThat().body(containsString(response));
+                .assertThat()
+                .statusCode(200)
+                .body("data", hasKey("id"))
+                .body("data", hasKey("name"))
+                .body("data", hasKey("email"))
+                .body("data", hasKey("gender"))
+                .body("data", hasKey("status"))
+                .body("code", equalTo(201))
+                .log().all();
 
     }
 }

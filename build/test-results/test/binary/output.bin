@@ -1,0 +1,39 @@
+HTTP/1.1 200 OK
+%Date: Mon, 04 Mar 2024 16:59:01 GMT
+/Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+4Cache-Control: max-age=0, private, must-revalidate
+,etag: W/"5ebfcfb0adf28ff1c93bbe64345ec79f"
+9location: https://gorest.co.in/public-api/users/6759270
+2referrer-policy: strict-origin-when-cross-origin
+vary: Origin
+!x-content-type-options: nosniff
+x-download-options: noopen
+x-frame-options: SAMEORIGIN
+)x-permitted-cross-domain-policies: none
+x-ratelimit-limit: 90
+x-ratelimit-remaining: 89
+x-ratelimit-reset: 1
+4x-request-id: 31bba7b0-c027-43da-9b6b-8869a6f9fc76
+x-runtime: 0.097497
+x-xss-protection: 0
+CF-Cache-Status: DYNAMIC
+úReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KtTlSgYuLnFZzpIHL%2FRbUGAFU3jvMig1r1RvreuBB4Zawfij6jElCPmxYD3cME7WnZbCA4IFpnVeBzdxJeNZx1tkKlqTjJaHlY4eYsZoU7lzbYZMoL1RxpVBRjhEhNo%3D"}],"group":"cf-nel","max_age":604800}
+CNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 85f36a0f5f8f6dbf-MIA
+Content-Encoding: gzip
+alt-svc: h3=":443"; ma=86400
+
+{
+    "code": 201,
+    "meta": null,
+    "data": {
+        "id": 6759270,
+$        "name": "Agora Vai Barros",
+&        "email": "simbora@gmail.com",
+        "gender": "male",
+        "status": "active"
+    }
+}
